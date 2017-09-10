@@ -1,4 +1,4 @@
-# Peach [![Build Status](https://travis-ci.org/peachdocs/peach.svg?branch=master)](https://travis-ci.org/peachdocs/peach)
+# Peach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach/WebOnPeach.svg?branch=master)](https://travis-ci.org/peachdocs/peach)
 
 ![](https://github.com/peachdocs/peach/raw/master/public/img/favicon.ico)
 
