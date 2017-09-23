@@ -13,6 +13,7 @@
 // under the License.
 
 // Peach is a web server for multi-language, real-time synchronization and searchable documentation.
+// Origin from peach doc .
 package main
 
 import (
@@ -21,11 +22,11 @@ import (
 
 	"github.com/urfave/cli"
 
-	"github.com/peachdocs/peach/cmd"
-	"github.com/peachdocs/peach/modules/setting"
+	"./cmd"
+	"./modules/setting"
 )
 
-const APP_VER = "0.9.2.1205"
+const APP_VER = "0.9"
 
 func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
@@ -34,11 +35,11 @@ func init() {
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "Peach"
-	app.Usage = "Modern Documentation Server"
+	app.Name = "WebOnPeach"
+	app.Usage = "Modern Modular Furniture Web Server"
 	app.Version = APP_VER
-	app.Author = "Unknwon"
-	app.Email = "u@gogs.io"
+	app.Author = "lightspread"
+	app.Email = "flag929@gmail.com"
 	app.Commands = []cli.Command{
 		cmd.Web,
 		cmd.New,

@@ -20,7 +20,7 @@ import (
 	"gopkg.in/ini.v1"
 	"gopkg.in/macaron.v1"
 
-	"github.com/peachdocs/peach/modules/bindata"
+	"../../modules/bindata"
 )
 
 type NavbarItem struct {
@@ -177,6 +177,7 @@ func NewContext() {
 	for _, lang := range Docs.Langs {
 		if lang == "en-US" || lang == "zh-CN" {
 			Docs.Locales["locale_"+lang+".ini"] = bindata.MustAsset("conf/locale/locale_" + lang + ".ini")
+			//Docs.Locales["locale_"+lang+".ini"] = []byte("conf/locale/locale_" + lang + ".ini")
 		} else {
 			Docs.Locales["locale_"+lang+".ini"] = []byte("")
 		}

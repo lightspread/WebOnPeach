@@ -20,8 +20,8 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"github.com/peachdocs/peach/models"
-	"github.com/peachdocs/peach/modules/middleware"
+	"../models"
+	"../modules/middleware"
 )
 
 func authRequired(ctx *middleware.Context) {

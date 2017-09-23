@@ -24,10 +24,10 @@ import (
 	"github.com/urfave/cli"
 	"gopkg.in/macaron.v1"
 
-	"github.com/peachdocs/peach/models"
-	"github.com/peachdocs/peach/modules/middleware"
-	"github.com/peachdocs/peach/modules/setting"
-	"github.com/peachdocs/peach/routers"
+	"../models"
+	"../modules/middleware"
+	"../modules/setting"
+	"../routers"
 )
 
 var Web = cli.Command{
