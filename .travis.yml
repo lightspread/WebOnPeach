@@ -8,3 +8,5 @@ install: go get -v
 
 notifications:
   email: false
+
+go_import_path: github.com/lightspread/WebOnPeach
