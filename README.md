@@ -2,7 +2,7 @@ Peach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach.svg?branch=m
 
 ![](https://github.com/peachdocs/peach/raw/master/public/img/favicon.ico)
 
-Peach is a web server for multi-language, real-time synchronization and searchable documentation.
+WebOnPeach is a website base on peachdocs mainly for -language, real-time synchronization and searchable documentation.
 
 #### Current version: 0.9.2
 
