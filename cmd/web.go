@@ -53,7 +53,7 @@ func runWeb(ctx *cli.Context) {
 	m.Use(macaron.Recovery())
 	m.Use(macaron.Statics(macaron.StaticOptions{
 		SkipLogging: setting.ProdMode,
-	}, "custom/public", "public", models.HTMLRoot))
+	}, "custom/public", "public", "data/samples","data/cubes",models.HTMLRoot))
 	m.Use(i18n.I18n(i18n.Options{
 		Files:       setting.Docs.Locales,
 		DefaultLang: setting.Docs.Langs[0],
@@ -74,6 +74,10 @@ func runWeb(ctx *cli.Context) {
 	m.Post("/hook", routers.Hook)
 	m.Get("/search", routers.Search)
 	m.Get("/*", routers.Pages)
+
+	//Add by webonpeach
+	m.Get("/samples", routers.Samples)
+	m.Get("/samples/list", routers.SamplesList)
 
 	m.NotFound(routers.NotFound)
 

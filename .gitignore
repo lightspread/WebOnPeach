@@ -25,4 +25,5 @@ _testmain.go
 peach.sublime-workspace
 peach.sublime-project
 peach
-data/html
+data
+custom

@@ -82,6 +82,8 @@ var (
 	Docs struct {
 		Type   DocType
 		Target string
+		Cubes string
+		Samples string
 		Secret string
 		Langs  []string
 
@@ -171,6 +173,8 @@ func NewContext() {
 	sec = Cfg.Section("docs")
 	Docs.Type = DocType(sec.Key("TYPE").In("local", []string{LOCAL, REMOTE}))
 	Docs.Target = sec.Key("TARGET").String()
+	Docs.Cubes = sec.Key("CUBEDATA").String()
+	Docs.Samples = sec.Key("SAMPLEDATA").String()
 	Docs.Secret = sec.Key("SECRET").String()
 	Docs.Langs = Cfg.Section("i18n").Key("LANGS").Strings(",")
 	Docs.Locales = make(map[string][]byte)
