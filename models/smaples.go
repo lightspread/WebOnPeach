@@ -13,10 +13,7 @@ type SampleItems []struct {
 	Name     string `json:"name"`
 	Catagory string `json:"catagory"`
 	Artist   string `json:"artist"`
-	Desc     struct {
-		EnUS string `json:"en_US"`
-		ZhCN string `json:"zh_CN"`
-	} `json:"desc"`
+	Desc     string `json:"desc"`
 	Img  string `json:"img"`
 	Img2 string `json:"img2"`
 }
@@ -24,22 +21,44 @@ type SampleItems []struct {
 
 
 var (
-	cachelist SampleItems
-	listfile string = "lists.json"
+	cachelistzhCN SampleItems
+    cachelistenUS SampleItems
+	listfilezhCN string = "lists_zh-CN.json"
+    listfileenUS string = "lists_en-US.json"
+)
+
+const (
+	Locale_zh = iota
+	Locale_en
 )
 
 
 
-func GetSampleLists() (SampleItems,error) {
-	if cachelist !=nil {
-		return  cachelist,nil
-	} else {
-		err := ReloadSampleLists()
-    	return cachelist,err
+func GetSampleLists(locale int) (SampleItems,error) {
+	switch locale {
+	case Locale_en:
+		if cachelistenUS !=nil {
+			return  cachelistenUS,nil
+		} else {
+			err := ReloadSampleLists(locale)
+			return cachelistenUS,err
+		}
+	default:
+		if cachelistzhCN !=nil {
+			return  cachelistzhCN,nil
+		} else {
+			err := ReloadSampleLists(locale)
+			return cachelistzhCN,err
+		}
 	}
+
 }
 
-func ReloadSampleLists() (error) {
+func ReloadSampleLists(locale int) (error) {
+	listfile := listfilezhCN
+	if locale==Locale_en {
+		listfile = listfileenUS
+	}
 	var samlists SampleItems
 	bytes, err := ioutil.ReadFile(path.Join(setting.Docs.Samples,listfile))
 	if err != nil {
@@ -52,6 +71,10 @@ func ReloadSampleLists() (error) {
 		return  fmt.Errorf("Fail to read samples from source(%s): %v - %s", setting.Docs.Samples, err)
 	}
 
-	cachelist = samlists
+	if locale==Locale_en {
+		cachelistenUS = samlists
+	} else {
+		cachelistzhCN = samlists
+	}
 	return nil
 }

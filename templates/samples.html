@@ -4,11 +4,12 @@
 <div class="ui inverted vertical center aligned segment">
     {% include Page.NavbarTplPath %}
 </div>
+<div id="app-4">
 <div class="ui hidden divider"></div>
 <div class="ui grid samples">
     <div class="one wide column"></div>
     <div class="fourteen wide column">
-        <div id="app-4" class="ui stackable six  link cards">
+        <div  class="ui stackable six  link cards">
             {% verbatim %}
             <div class="red card" v-for="item in items">
                 <div class="image">
@@ -32,8 +33,15 @@
     </div>
     <div class="one wide column"></div>
 </div>
-
 <div class="ui hidden divider"></div>
+    <div class="ui vertical center aligned segment"><pagination :total="total" :page-size="pageSize" :callback="pageChanged" :options="paginationOptions">
+    </pagination></div>
+
+</div>
+<div class="ui hidden divider"></div>
+<script type="application/javascript" >
+    JsLocale.changeLocale("{{Lang}}");
+</script>
 <script type="text/javascript" src="/js/wop.js?v={{AppVer}}"></script>
 {% include Page.FooterTplPath %}
 {% endblock %}

@@ -13,15 +13,8 @@
           </div>
         </form>
       {% endif %}
-      <div class="ui language floating dropdown link item">
-        <i class="world icon"></i>
-        <div class="text">{{LangName}}</div>
-      	<div class="menu">
-      		{% for lang in AllLangs %}
-					<a class="item {% if Lang == lang.Lang %}active selected{% endif %}" href="{{Link}}?lang={{lang.Lang}}">{{lang.Name}}</a>
-					{% endfor %}
-				</div>
-      </div>
+        <a class="item {% if Lang == 'zh-CN' %}active selected{% endif %}" href="{{Link}}?lang=zh-CN"><i class="world icon"></i>中</a>
+        <a class="item {% if Lang == 'en-US' %}active selected{% endif %}" href="{{Link}}?lang=en-US"><i class="world icon"></i>en</a>
     </div>
   </div>
 </div>

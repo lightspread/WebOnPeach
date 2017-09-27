@@ -1,13 +1,10 @@
 $(document).ready(function () {
-	$('.dropdown.link').dropdown({
-		action: 'hide'
-	})
 
 	// Emojify
-    emojify.setConfig({
-        img_dir: '/img/emoji'
-    });
-    emojify.run();
+    //emojify.setConfig({
+    //    img_dir: '/img/emoji'
+    //});
+    //emojify.run();
 
     // Highlight JS
     if (typeof hljs != 'undefined') {
@@ -37,4 +34,42 @@ $(document).ready(function () {
         node = node.wrap('<div id="' + name + '" class="anchor-wrap" ></div>');
         node.append('<a class="anchor" href="#' + name + '"><span class="octicon octicon-link"></span></a>');
     });
-})
+});
+
+var JsLocale = JsLocale || (function () {
+    var local = "zh-CN";
+    var localzh = local;
+
+    var datach = {
+        firstTxt:"首页",
+        preTxt:"上一页",
+        nextTxt:"下一页",
+        lastTxt:"尾页"
+    };
+    var dataen = {
+        firstTxt:"First Page",
+        preTxt:"Rre Page",
+        nextTxt:"Next Page",
+        lastTxt:"Last Page"
+    };
+
+    var datas = datach;
+
+    return {
+       changeLocale : function(name) {
+
+           if(name === localzh) {
+               datas = datach;
+           } else {
+               datas = dataen;
+           }
+           local = name;
+       },
+       getLocale : function () {
+           return local;
+       },
+       getLocaleDatas : function () {
+           return datas;
+       }
+    }
+}());

@@ -16,22 +16,12 @@
 			<script src="https://cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
 		{% else %}
 			<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
-
 		{% endif %}
 
-		<script type="text/javascript" src="https://cdn.bootcss.com/semantic-ui/2.2.11/semantic.min.js?v={{AppVer}}"></script>
-		<script type="text/javascript" src="https://cdn.staticfile.org/emojify.js/1.1.0/js/emojify.min.js"></script>
 		<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
 		<script type="text/javascript" src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
 		<script type="text/javascript" src="/js/peach.js?v={{AppVer}}"></script>
 
-
-		{% if Extension.HighlightJSCustomCSS %}
-			<link rel="stylesheet" href="{{Extension.HighlightJSCustomCSS}}">
-		{% else %}
-			<link rel="stylesheet" href="/css/highlight-8.7/default.css">
-		{% endif %}
-		<script src="https://cdn.staticfile.org/highlight.js/8.7/highlight.min.js"></script>
 
 		<title>{% block title %}{{Title}}{% endblock %}</title>
 	</head>
