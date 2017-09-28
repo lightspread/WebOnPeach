@@ -20,8 +20,8 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"../models"
-	"../modules/middleware"
+	"github.com/lightspread/WebOnPeach/models"
+	"github.com/lightspread/WebOnPeach/modules/middleware"
 )
 
 func authRequired(ctx *middleware.Context) {

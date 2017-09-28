@@ -2,8 +2,8 @@ package routers
 
 
 import (
-	"../models"
-	"../modules/middleware"
+	"github.com/lightspread/WebOnPeach/models"
+	"github.com/lightspread/WebOnPeach/modules/middleware"
 	"encoding/json"
 )
 

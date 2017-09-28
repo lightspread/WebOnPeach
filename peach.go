@@ -22,8 +22,8 @@ import (
 
 	"github.com/urfave/cli"
 
-	"./cmd"
-	"./modules/setting"
+	"github.com/lightspread/WebOnPeach/cmd"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 )
 
 const APP_VER = "0.9"

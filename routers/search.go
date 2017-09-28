@@ -15,9 +15,9 @@
 package routers
 
 import (
-	"../models"
-	"../modules/middleware"
-	"../modules/setting"
+	"github.com/lightspread/WebOnPeach/models"
+	"github.com/lightspread/WebOnPeach/modules/middleware"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 )
 
 func Search(ctx *middleware.Context) {

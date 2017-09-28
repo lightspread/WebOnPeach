@@ -24,9 +24,9 @@ import (
 	"github.com/Unknwon/com"
 	"github.com/Unknwon/log"
 
-	"../models"
-	"../modules/middleware"
-	"../modules/setting"
+	"github.com/lightspread/WebOnPeach/models"
+	"github.com/lightspread/WebOnPeach/modules/middleware"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 )
 
 func renderEditPage(ctx *middleware.Context, documentPath string) {

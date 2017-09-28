@@ -19,7 +19,7 @@ import (
 
 	"gopkg.in/macaron.v1"
 
-	"../../modules/setting"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 )
 
 type Context struct {

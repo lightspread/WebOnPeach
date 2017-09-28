@@ -20,7 +20,7 @@ import (
 	"github.com/Unknwon/com"
 	"github.com/Unknwon/log"
 
-	"../modules/setting"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 )
 
 func initLangDocs(tocs map[string]*Toc, localRoot, lang string) {

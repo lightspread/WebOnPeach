@@ -2,7 +2,7 @@ package models
 
 import (
 	"io/ioutil"
-	"../modules/setting"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 	"fmt"
 	"encoding/json"
 	"github.com/Unknwon/log"

@@ -31,7 +31,7 @@ import (
 	"github.com/russross/blackfriday"
 	"gopkg.in/ini.v1"
 
-	"../modules/setting"
+	"github.com/lightspread/WebOnPeach/modules/setting"
 )
 
 type Node struct {

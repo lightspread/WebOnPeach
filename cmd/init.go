@@ -24,7 +24,7 @@ import (
 	"github.com/urfave/cli"
 	"gopkg.in/ini.v1"
 
-	"../modules/bindata"
+	"github.com/lightspread/WebOnPeach/modules/bindata"
 )
 
 var New = cli.Command{
