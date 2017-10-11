@@ -1,16 +1,13 @@
-# Peach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach.svg?branch=master)](https://travis-ci.org/lightspread/WebOnPeach/WebOnPeach)
+WebOnPeach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach.svg?branch=master)](https://travis-ci.org/lightspread/WebOnPeach/WebOnPeach)
 
-![](https://github.com/peachdocs/peach/raw/master/public/img/favicon.ico)
+![](./public/img/logo_128.ico) ![](https://github.com/peachdocs/peach/raw/master/public/img/favicon.ico)
 
-Peach is a web server for multi-language, real-time synchronization and searchable documentation.
+WebOnPeach is a website base on [peachdocs](https://github.com/peachdocs/peach) mainly for our moudular furniture website .
 
 #### Current version: 0.9.2
 
 ## Getting Help
 
-- [Getting Started](http://peachdocs.org/docs/intro/getting_started)
-- [Ship with Docker](https://github.com/peachdocs/peach/tree/master/docker)
-- QQ 用户群：254120107
 
 ## License
 

@@ -53,7 +53,7 @@ func runWeb(ctx *cli.Context) {
 	m.Use(macaron.Recovery())
 	m.Use(macaron.Statics(macaron.StaticOptions{
 		SkipLogging: setting.ProdMode,
-	}, "custom/public", "public", "data/samples","data/cubes",models.HTMLRoot))
+	}, "custom/public", "public", setting.Docs.Samples,setting.Docs.Cubes,models.HTMLRoot))
 	m.Use(i18n.I18n(i18n.Options{
 		Files:       setting.Docs.Locales,
 		DefaultLang: setting.Docs.Langs[0],
