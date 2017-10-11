@@ -4,9 +4,16 @@ go:
   - 1.6
   - master
 
+before_install:
+  - go get -t -v ./...
+
 install: go get -v
 
 notifications:
   email: false
 
-go_import_path: github.com/lightspread/WebOnPeach
+script:
+  - go test -race -coverprofile=coverage.txt -covermode=atomic
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
