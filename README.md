@@ -1,5 +1,7 @@
 WebOnPeach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach.svg?branch=master)](https://travis-ci.org/lightspread/WebOnPeach/WebOnPeach)
 
+[codacy](https://www.codacy.com/app/lightspread/WebOnPeach/dashboard)
+
 ![](./public/img/logo_128.ico) ![](https://github.com/peachdocs/peach/raw/master/public/img/favicon.ico)
 
 WebOnPeach is a website base on [peachdocs](https://github.com/peachdocs/peach) mainly for our moudular furniture website .
