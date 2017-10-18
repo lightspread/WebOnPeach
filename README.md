@@ -1,4 +1,4 @@
-WebOnPeach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach.svg?branch=master)](https://travis-ci.org/lightspread/WebOnPeach/WebOnPeach)
+WebOnPeach [![Build Status](https://travis-ci.org/lightspread/WebOnPeach.svg?branch=master)](https://travis-ci.org/lightspread/WebOnPeach)
 
 [codacy](https://www.codacy.com/app/lightspread/WebOnPeach/dashboard)
 
