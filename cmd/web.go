@@ -17,7 +17,7 @@ package cmd
 import (
 	"fmt"
 	"net/http"
-
+	"mime"
 	"github.com/Unknwon/log"
 	"github.com/go-macaron/i18n"
 	"github.com/go-macaron/pongo2"
@@ -40,6 +40,8 @@ var Web = cli.Command{
 }
 
 func runWeb(ctx *cli.Context) {
+	mime.AddExtensionType(".cubes", "application/octet-stream")
+
 	if ctx.IsSet("config") {
 		setting.CustomConf = ctx.String("config")
 	}
@@ -72,6 +74,7 @@ func runWeb(ctx *cli.Context) {
 	m.Get("/docs/images/*", routers.DocsStatic)
 	m.Get("/docs/*", routers.Protect, routers.Docs)
 	m.Post("/hook", routers.Hook)
+	m.Post("/hooksamples", routers.HookSamples)
 	m.Get("/search", routers.Search)
 	m.Get("/*", routers.Pages)
 

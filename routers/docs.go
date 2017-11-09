@@ -103,3 +103,17 @@ func Hook(ctx *middleware.Context) {
 	}
 	ctx.Status(200)
 }
+
+func HookSamples(ctx *middleware.Context) {
+	if ctx.Query("secret") != setting.Docs.Secret {
+		ctx.Error(403)
+		return
+	}
+
+	log.Info("Incoming hook update request")
+	if err := models.ReloadSamplelists(); err != nil {
+		ctx.Error(500)
+		return
+	}
+	ctx.Status(200)
+}

@@ -14,10 +14,10 @@ type SampleItems []struct {
 	Catagory string `json:"catagory"`
 	Artist   string `json:"artist"`
 	Desc     string `json:"desc"`
-	Img  string `json:"img"`
+	FileLocation string `json:"filelocation"`
+	Img1  string `json:"img1"`
 	Img2 string `json:"img2"`
 }
-
 
 
 var (
@@ -51,7 +51,18 @@ func GetSampleLists(locale int) (SampleItems,error) {
 			return cachelistzhCN,err
 		}
 	}
+}
 
+func ReloadSamplelists() (error) {
+	err := ReloadSampleLists(Locale_zh)
+	if err!=nil {
+		return err
+	}
+	err2 := ReloadSampleLists(Locale_en)
+	if err2!=nil {
+		return err2
+	}
+	return nil
 }
 
 func ReloadSampleLists(locale int) (error) {
