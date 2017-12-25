@@ -38,3 +38,7 @@ func SamplesList(ctx *middleware.Context) {
 		ctx.HTML(404,"404")
 	}
 }
+
+func Download(ctx *middleware.Context)  {
+	ctx.HTML(200, "download")
+}

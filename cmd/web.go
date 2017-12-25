@@ -81,6 +81,7 @@ func runWeb(ctx *cli.Context) {
 	//Add by webonpeach
 	m.Get("/samples", routers.Samples)
 	m.Get("/samples/list", routers.SamplesList)
+	m.Get("/download", routers.Download)
 
 	m.NotFound(routers.NotFound)
 

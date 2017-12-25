@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{Title}} - {{Tr(Lang, "name")}}{% endblock %}
+{% block body %}
+	<div class="ui inverted vertical center aligned segment">
+		{% include Page.NavbarTplPath %}
+
+
+	</div>
+    <div class="ui hidden divider"></div>
+<div class="text center">
+<h1 class="ui header center">
+
+{{Tr(Lang, "download.title")}}
+</h1>
+</div>
+<div class="ui two column middle aligned relaxed fitted stackable grid">
+	<div class="row" >
+		<div class="right aligned column">
+			{{Tr(Lang, "download.android")}}
+		</div>
+		<div class="ui vertical divided"></div>
+		<div class="left aligned column">
+			<img src="/imgs/android.png" >
+		</div>
+	</div>
+</div>
+<div class="ui hidden divider"></div>
+	{% include Page.FooterTplPath %}
+{% endblock %}
